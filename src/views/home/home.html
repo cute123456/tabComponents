@@ -1,0 +1,11 @@
+<div class="home">
+    <!-- tab栏 -->
+    <my-tab :tab-heads="tabsList" @showContent="updateContent" ref="abc"></my-tab>
+    <!-- 内容 -->
+    <div class="tab-content">
+        <transition name="fade">
+            <div>{{content[tabIndex].content}}</div>
+        </transition>
+
+    </div>
+</div>

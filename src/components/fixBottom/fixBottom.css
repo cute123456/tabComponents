@@ -1,0 +1,94 @@
+footer.footerbar {
+    height: 56px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 -1px 9px rgba(4, 0, 0, 0.1);
+    /*只有头部阴影*/
+}
+
+footer.footerbar .footItem {
+    float: left;
+    width: 33.33%;
+    line-height: 76px;
+    background-repeat: no-repeat;
+    background-position: center 7px;
+    background-size: 28px 28px;
+    overflow: hidden;
+    font-size: 12px;
+    padding-top: 5px;
+    color: #1b1b1b;
+}
+
+.home1 {
+    background-image: url("./img/wrong-icon-active.png");
+    color: #1b1b1b;
+}
+
+footer.footerbar .home2 {
+    background-image: url("./img/wrong-icon.png");
+    color: #1b1b1b;
+    font-weight: 600;
+    /* background-color: #212122; */
+}
+
+.classify1 {
+    color: #1b1b1b;
+    background-image: url("./img/shouji-icon-active.png");
+}
+
+footer.footerbar .classify2 {
+    background-image: url("./img/shouji-icon.png");
+    color: #1b1b1b;
+    font-weight: 600;
+    /* background-color: #212122; */
+}
+
+.my1 {
+    background-image: url("./img/my-icon-active.png");
+    color: #1b1b1b;
+    background-size: 100%;
+}
+
+footer.footerbar .my2 {
+    background-image: url("./img/my-icon.png");
+    color: #1b1b1b;
+    font-weight: 600;
+    /* background-color: #212122; */
+}
+
+a,
+a:visited,
+a:hover {
+    color: #1b1b1b;
+}
+
+.change {
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin-left: -27px;
+    background: #f6f6f6;
+    border-radius: 50%;
+    z-index: -1;
+    border-top: solid 1px #ddd;
+    /* box-shadow: 0 -1px 1px #e7e7e7;  */
+    /*只有头部阴影*/
+}
+
+.change img {
+    max-width: 36px;
+    display: block;
+    border: 0;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+footer.footerbar .red {
+    color: #fff;
+}
