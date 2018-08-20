@@ -5,8 +5,14 @@
  * @date 2018-06-19 09:44:26 
  */
 
-import Vue from 'vue'
+import Vue from 'vue';
 import fixBottom from '@/components/fixBottom'
+
+import { Slider, SliderItem } from 'vue-ydui/dist/lib.rem/slider';
+/* 使用px：import {Slider, SliderItem} from 'vue-ydui/dist/lib.px/slider'; */
+
+Vue.component(Slider.name, Slider);
+Vue.component(SliderItem.name, SliderItem);
 
 export default {
     name: 'home',
@@ -15,13 +21,13 @@ export default {
             tabIndex: 0,
             tabsList: ["音乐", "影视", "综艺"],
             content: [{
-                    content: "我是音乐"
+                    content: "http://static.ydcss.com/uploads/ydui/1.jpg"
                 },
                 {
-                    content: "我是影视"
+                    content: "http://static.ydcss.com/uploads/ydui/2.jpg"
                 },
                 {
-                    content: "我是综艺"
+                    content: "http://static.ydcss.com/uploads/ydui/3.jpg"
                 }
             ]
         };
@@ -34,6 +40,10 @@ export default {
         updateContent(data) {
             this.tabIndex = data;
             // console.log(data);
+        },
+        // 轮播
+        getContent(e) {
+            this.tabIndex = e;
         }
     },
 

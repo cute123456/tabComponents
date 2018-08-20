@@ -2,7 +2,7 @@
     <div class="box">
         <div class="tab">
           <div class="tab-bottom"></div>
-            <div class="tab-item"  ref="tabParent" v-for="(item , index) in tabHeads"  v-bind:key="item" @click="getIndex(index)" :class="(tabIndex==index)?'active':''">{{item}}</div>
+            <div class="tab-item"  ref="tabParent" v-for="(item , index) in tabHeads"  v-bind:key="item" @click="getIndex(index)" :class="(tabIndexs==index)?'active':''">{{item}}</div>
         </div>  
     </div>
 </template>
@@ -17,12 +17,13 @@ export default {
   },
   props: {
     // 组件传参使用props
-    tabHeads: Array
+    tabHeads: Array,
+    tabIndexs: Number
   },
   methods: {
     // 组件的计算方法
     getIndex(index) {
-      this.tabIndex = index;
+      // this.tabIndex = index;
       this.$emit("showContent", index); //select事件触发后，自动触发showCityName事件
       // 游标
       this.getTab(index);
@@ -30,7 +31,7 @@ export default {
     /**
      * 游标设置
      */
-    getTab(index){
+    getTab(index) {
       this.$nextTick(function() {
         this.width = this.$refs.tabParent[index].clientWidth;
         this.leftOff = this.$refs.tabParent[index].offsetLeft;
@@ -52,9 +53,14 @@ export default {
     this.getTab(0);
     window.addEventListener("resize", this.resize);
   },
-  destroyed(){
+  watch: {
+    tabIndexs: function(val,old) {
+    this.getTab(val);
+      // console.log(val, old);
+    }
+  },
+  destroyed() {
     window.removeEventListener("resize", this.resize);
-
   }
 };
 </script>
@@ -83,7 +89,7 @@ export default {
 .active {
   /* border-bottom: 2px solid 	#FFB6C1; */
   color: #ffb6c1;
-  transition: all 1s;
+  transition: all 0.3s;
 }
 .tab-bottom {
   position: absolute;

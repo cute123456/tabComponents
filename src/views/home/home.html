@@ -1,11 +1,12 @@
 <div class="home">
     <!-- tab栏 -->
-    <my-tab :tab-heads="tabsList" @showContent="updateContent" ref="abc"></my-tab>
+    <my-tab :tab-heads="tabsList" :tab-indexs="tabIndex" @showContent="updateContent"></my-tab>
     <!-- 内容 -->
     <div class="tab-content">
-        <transition name="fade">
-            <div>{{content[tabIndex].content}}</div>
-        </transition>
-
+        <yd-slider :autoplay="0" :loop="true" :show-pagination="false" :index="tabIndex" :callback="getContent" style="min-height: 300px;">
+            <yd-slider-item v-for="(item, index ) in content" :key="index">
+                <div><img :src="item.content" alt=""></div>
+            </yd-slider-item>
+        </yd-slider>
     </div>
 </div>
