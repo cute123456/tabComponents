@@ -1,3 +1,10 @@
 <div class="detail">
-    <div></div>
+    <div class="box" v-for="(item,index) in foods">
+        <h1>{{item.classifiy}}</h1>
+        <div class="item-box">
+            <span v-for="(child,son) in item.list" @click="selectFoods(child.id)">{{child.name}}</span>
+        </div>
+    </div>
+    <div class="menu">你所选择的类目为：<span v-for="item in 8">猪肉</span></div>
+    <div class="btn-sure">确定</div>
 </div>
