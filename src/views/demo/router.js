@@ -7,10 +7,10 @@ import detail from './detail';
 export default [{
     name: '错题本',
     component: index,
-    path: '/wrongBook',
-    redirect: '/wrongBook/list',
+    path: '/demo',
+    redirect: '/demo/list',
     children: [{
-            name: '错题本列表',
+            name: '列表',
             path: 'list',
             component: list,
             meta: {
@@ -18,7 +18,7 @@ export default [{
             }
         },
         {
-            name: '错题本详情',
+            name: '详情',
             path: 'detail',
             component: detail,
             meta: {

@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import iconSvg from '@/components/iconSvg'
 
 import tab from '@/components/tab.vue'; // 导入自己写的组件文件
 import $ from 'jquery'
@@ -15,6 +16,7 @@ Vue.use(YDUI);
 Vue.use(tab); // 自定义全局组件的时候需要Vue.use();
 
 Vue.component('my-tab', tab);
+Vue.component('icon-svg', iconSvg) // fontIcon 若在阿里图标中添加了新图标,请在index.html中更新代码
 
 Vue.config.productionTip = false
 
