@@ -30,7 +30,9 @@ export default {
 }
 .svg-icon {
   width:18px;
+  height: 18px;
   color: #ddd;
+  margin-right: 10px;
 }
 
 </style>

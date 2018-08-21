@@ -35,6 +35,11 @@
     border-radius: 5px;
 }
 
+.item-box span.active {
+    background: #00CED1;
+    color: #fff;
+}
+
 .btn-sure {
     position: fixed;
     bottom: 0;

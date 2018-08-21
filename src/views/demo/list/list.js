@@ -49,6 +49,30 @@ export default {
                                     problem: '菜量太少了，种类少',
                                 },
                             ]
+                        }, {
+                            timeMonth: 3,
+                            secondList: [{
+                                    problem: '菜量太少了。。',
+                                },
+                                {
+                                    problem: '菜量太少了。。。',
+                                },
+                                {
+                                    problem: '菜量太少了，种类少',
+                                },
+                            ]
+                        }, {
+                            timeMonth: 3,
+                            secondList: [{
+                                    problem: '菜量太少了。。',
+                                },
+                                {
+                                    problem: '菜量太少了。。。',
+                                },
+                                {
+                                    problem: '菜量太少了，种类少',
+                                },
+                            ]
                         },
                         {
                             timeMonth: 4,
@@ -79,7 +103,7 @@ export default {
          * 折叠
          */
         toshow(i, s) {
-
+            console.log(`i=${i},s=${s}`)
             if (this.fatherNum == i && this.sonNum == s) {
                 this.fatherNum = -1;
                 this.sonNum = -1;

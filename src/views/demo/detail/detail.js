@@ -82,20 +82,44 @@ default {
         }
     },
     created() {
-
+        this.foods.forEach(item => {
+            item.list.forEach(item => {
+                item.check = false;
+            })
+        });
     },
     methods: {
         /**
          * 选择类目
          */
-        selectFoods(id) {
-            let isHas = this.selectsName.findIndex(item => {
-                return item.id
+        selectFoods(id, i, s) {
+            let isHas = this.selectsId.findIndex(item => {
+                return item == id;
             });
-            // 如果该类目没有被选择，则选中
-            if (isHas === -1) {
+            // console.log(id)
+            console.log(this.selectsId)
 
+            // 如果该类目没有被选择，则选中,把名字添加进selectsName数组里
+            if (isHas == -1) {
+                this.foods[i].list[s].check = true;
+                this.selectsName.push(this.foods[i].list[s].name);
+                this.selectsId.push(this.foods[i].list[s].id);
+
+            } else {
+                this.foods[i].list[s].check = false;
+                // 删除所选中类目
+                this.selectsName.splice(isHas, 1);
+                this.selectsId.splice(isHas, 1)
             }
+            // console.log(this.selectsName);
+            // console.log(this.selectsId);
+            // console.log(this.foods[i].list[s]);
+        },
+        /**
+         * 确定
+         */
+        confirm() {
+
         }
     }
 }
