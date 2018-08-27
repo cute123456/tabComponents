@@ -3,7 +3,7 @@
     margin: 20px 15px;
     padding: 20px;
     border: 1px solid #eee;
-    min-height: 300px;
+    /* min-height: 300px; */
     font-size: 26px;
     background: rgba(255, 228, 225);
 }

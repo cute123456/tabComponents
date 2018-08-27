@@ -3,10 +3,21 @@
     <my-tab :tab-heads="tabsList" :tab-indexs="tabIndex" @showContent="updateContent"></my-tab>
     <!-- 内容 -->
     <div class="tab-content">
-        <yd-slider :autoplay="0" :loop="true" :show-pagination="false" :index="tabIndex" :callback="getContent" style="min-height: 300px;">
+        <yd-slider :autoplay="0" :loop="true" :show-pagination="false" :index="tabIndex" :callback="getContent">
             <yd-slider-item v-for="(item, index ) in content" :key="index">
                 <div><img :src="item.content" alt=""></div>
             </yd-slider-item>
         </yd-slider>
     </div>
+
+    <div class="ty" style="margin: 20px;">
+        <!-- 直接使用animated中的动画class名，注意：必须使用animated这个class名，否则动画会无效 -->
+        <div class="box animated bounceInDown">动画</div>
+    </div>
+
+
+    <city-select @showCityName="showAdd"></city-select>
+
+    <fixBottom :check="1"></fixBottom>
+
 </div>

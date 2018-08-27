@@ -2,17 +2,17 @@
 
     <div @click="$router.push('/')" class="flex text-center">
         <span class="footItem" v-bind:class="{'home2':check==1,'home1':check!=1}">
-      错题本
+      切换
     </span>
     </div>
 
-    <div @click="$router.push('/wrongFrom')" class="flex text-center">
+    <div @click="$router.push('/demo/detail')" class="flex text-center">
         <span class="footItem" v-bind:class="{'classify2':check==2,'classify1':check!=2}" style="position:relative;">
-      错题收集
+      列表
     </span>
     </div>
 
-    <div @click="$router.push('/my')" class="flex text-center">
+    <div @click="$router.push('/demo/list')" class="flex text-center">
         <span class="footItem" v-bind:class="{'my2':check==3,'my1':check!=3}">
       我的
     </span>

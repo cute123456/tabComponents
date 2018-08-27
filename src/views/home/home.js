@@ -6,6 +6,7 @@
  */
 
 import Vue from 'vue';
+import CitySelect from '@/components/CitySelect.vue'
 import fixBottom from '@/components/fixBottom'
 
 import { Slider, SliderItem } from 'vue-ydui/dist/lib.rem/slider';
@@ -34,6 +35,7 @@ export default {
     },
     components: {
         fixBottom,
+        'city-select': CitySelect
     },
     methods: {
         // 组件的计算方法
@@ -44,6 +46,9 @@ export default {
         // 轮播
         getContent(e) {
             this.tabIndex = e;
+        },
+        showAdd(e) {
+            console.log(e)
         }
     },
 

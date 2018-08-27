@@ -1,5 +1,6 @@
 import Vue from 'vue'
-
+var city = require('@/assets/city.json');
+import CitySelect from '../../../components/CitySelect.vue'
 export default {
     data() {
         return {
@@ -93,17 +94,17 @@ export default {
         }
     },
     components: {
-
+        'city-select': CitySelect
     },
-    cretaed() {
-
+    created() {
+        // console.log(city)
     },
     methods: {
         /**
          * 折叠
          */
         toshow(i, s) {
-            console.log(`i=${i},s=${s}`)
+            // console.log(`i=${i},s=${s}`)
             if (this.fatherNum == i && this.sonNum == s) {
                 this.fatherNum = -1;
                 this.sonNum = -1;
