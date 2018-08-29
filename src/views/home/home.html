@@ -4,7 +4,7 @@
     <!-- 内容 -->
     <div class="tab-content">
         <yd-slider :autoplay="0" :loop="true" :show-pagination="false" :index="tabIndex" :callback="getContent">
-            <yd-slider-item v-for="(item, index ) in content" :key="index">
+            <yd-slider-item v-for="(item, index ) in content" :key="index" class="animated slideInLeft">
                 <div><img :src="item.content" alt=""></div>
             </yd-slider-item>
         </yd-slider>

@@ -53,9 +53,16 @@ export default {
     },
 
     created() {
-
+        console.log(333)
+            // this.$axios.get('http://127.0.0.1:3000/sky/3/9', res => {
+            //     console.log(res);
+            // })
     },
     mounted() {
-
+        this.$axios.post('http://www.cool1024.com:3000/playlist/detail', {
+            id: '2250011882'
+        }).then(res => {
+            console.log(res)
+        })
     },
 }

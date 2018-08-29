@@ -1,0 +1,21 @@
+<div class="list">
+
+    <div class="list-contain" v-for="(first,i) in list">
+        <h1>{{first.timeYear}}</h1>
+        <div class="list-item" v-for="(second, s) in first.childList">
+            <div @click.stop="toshow(i,s)" class="box-shadow">
+                <div class="title">
+                    <span>{{second.timeMonth}}月情况汇总</span>
+                    <icon-svg iconClass="arrow_u" v-if="fatherNum==i && sonNum == s"></icon-svg>
+                    <icon-svg iconClass="arrow_d" v-else></icon-svg>
+                </div>
+                <div class="third-box" v-if="fatherNum==i && sonNum == s">
+                    <div v-for="third in second.secondList" class="animated bounceInDown">
+                        {{third.problem}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

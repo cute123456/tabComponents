@@ -5,6 +5,7 @@
 </template>
 
 <script>
+
 export default {
   name: "App",
   data() {
@@ -13,7 +14,7 @@ export default {
     }
   },
   methods: {
-
+    
   }
 };
 </script>
